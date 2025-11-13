@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About | Campus Events</title>
+  <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+  <header>
+    <div class="site-top">
+      <div class="brand"><span class="logo">CE</span><div>Campus Events</div></div>
+      <button class="nav-toggle" aria-expanded="false">☰</button>
+      <nav>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a class="active" href="./about.html">About</a></li>
+          <li><a href="./events.html">Events</a></li>
+          <li><a href="./gallery.html">Gallery</a></li>
+          <li><a href="./sponsors.html">Sponsors</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h1>About Campus Events</h1>
+      <p>Our university has a long tradition of hosting high-quality seminars, workshops, and student-led activities. The Campus Events portal was built to centralize event information and make it easy for the campus community to discover and participate.</p>
+      <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Group photo" style="width:100%;border-radius:8px;margin-top:1rem;object-fit:cover;max-height:360px">
+    </section>
+
+    <section>
+      <h2>Project Team</h2>
+      <div class="card-grid">
+        <div class="card"><h3>Samira Khan</h3><p class="muted">Team Lead — Events Coordinator</p></div>
+        <div class="card"><h3>Arjun Patel</h3><p class="muted">Frontend Developer</p></div>
+        <div class="card"><h3>Leila Martinez</h3><p class="muted">Designer</p></div>
+        <div class="card"><h3>Marcus Lee</h3><p class="muted">Backend & DevOps</p></div>
+        <div class="card"><h3>Nina Rossi</h3><p class="muted">Content & Outreach</p></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Mission</h2>
+      <div class="card"><p>To make campus life more accessible and connected by providing a single, easy-to-use hub for event discovery, registration, and promotion.</p></div>
+      <h2 style="margin-top:1rem">Vision</h2>
+      <div class="card"><p>To foster an engaged campus community where every student and staff member can find opportunities to learn, collaborate, and celebrate.</p></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>&copy; 2025 Campus Events — University Name</div>
+      <div class="muted">Contact the team via the Contact page</div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const navUL = document.querySelector('nav ul');
+    toggle && toggle.addEventListener('click', ()=>{navUL.style.display = navUL.style.display === 'flex' ? 'none' : 'flex'});
+  </script>
+</body>
+</html>
