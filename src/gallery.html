@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Gallery | Campus Events</title>
+  <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+  <header>
+    <div class="site-top">
+      <div class="brand"><span class="logo">CE</span><div>Campus Events</div></div>
+      <button class="nav-toggle" aria-expanded="false">☰</button>
+      <nav>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./events.html">Events</a></li>
+          <li><a class="active" href="./gallery.html">Gallery</a></li>
+          <li><a href="./sponsors.html">Sponsors</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section>
+      <h1>Event Gallery</h1>
+      <p class="muted">Photos from past workshops, competitions, and festivals.</p>
+      <div class="gallery-grid" style="margin-top:1rem">
+        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=800&auto=format&fit=crop&s=placeholder" alt="event 1">
+        <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=800&auto=format&fit=crop&s=placeholder" alt="event 2">
+        <img src="https://images.unsplash.com/photo-1529336953120-6117f2652a02?q=80&w=800&auto=format&fit=crop&s=placeholder" alt="event 3">
+        <img src="https://images.unsplash.com/photo-1508609349937-5ec4ae374ebf?q=80&w=800&auto=format&fit=crop&s=placeholder" alt="event 4">
+        <img src="https://images.unsplash.com/photo-1515165562835-c2e0c6c3a9e5?q=80&w=800&auto=format&fit=crop&s=placeholder" alt="event 5">
+        <img src="https://images.unsplash.com/photo-1531058020387-3be344556be6?q=80&w=800&auto=format&fit=crop&s=placeholder" alt="event 6">
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>&copy; 2025 Campus Events — University Name</div>
+      <div class="muted">Browse more on the Events page</div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const navUL = document.querySelector('nav ul');
+    toggle && toggle.addEventListener('click', ()=>{navUL.style.display = navUL.style.display === 'flex' ? 'none' : 'flex'});
+  </script>
+</body>
+</html>
