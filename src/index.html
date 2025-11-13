@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Campus Events | Home</title>
+  <link rel="stylesheet" href="../styles/style.css">
+  <meta name="description" content="Campus Events portal for seminars, workshops, and university activities">
+  <style>/* small page-specific tweaks */.hero{padding-top:2rem;padding-bottom:2rem}</style>
+</head>
+<body>
+  <header>
+    <div class="site-top">
+      <div class="brand">
+        <span class="logo">CE</span>
+        <div>
+          <div>Campus Events</div>
+          <small style="opacity:.9">University Portal</small>
+        </div>
+      </div>
+      <button class="nav-toggle" aria-expanded="false">☰</button>
+      <nav>
+        <ul>
+          <li><a class="active" href="./index.html">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./events.html">Events</a></li>
+          <li><a href="./gallery.html">Gallery</a></li>
+          <li><a href="./sponsors.html">Sponsors</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="hero">
+      <div class="container">
+        <h1>Bringing campus activities closer to you</h1>
+        <p>The Campus Events portal helps students and staff discover seminars, workshops, cultural programs, and sports events across the university. Browse by category, register for events, and connect with organizers.</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section>
+      <h2>Event Categories</h2>
+      <div class="card-grid">
+        <div class="card center">
+          <h3>Tech Talks</h3>
+          <p class="muted">Expert talks, research seminars, and guest lectures on CS and engineering topics.</p>
+        </div>
+        <div class="card center">
+          <h3>Workshops</h3>
+          <p class="muted">Hands-on sessions to build practical skills in software, robotics, and creative arts.</p>
+        </div>
+        <div class="card center">
+          <h3>Cultural Events</h3>
+          <p class="muted">Music nights, theatre, and student club showcases celebrating campus life.</p>
+        </div>
+        <div class="card center">
+          <h3>Sports & Fitness</h3>
+          <p class="muted">Interdepartmental matches, marathons, and fitness bootcamps.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Upcoming Highlights</h2>
+      <div class="card-grid">
+        <article class="card event-card">
+          <h3>AI Ethics Symposium</h3>
+          <div class="event-meta">Nov 26, 2025 • Science Auditorium</div>
+          <p>Panel discussion with faculty and industry leaders exploring the societal impact of AI.</p>
+          <div class="center"><a class="btn" href="./events.html">View Events</a></div>
+        </article>
+
+        <article class="card event-card">
+          <h3>Robotics Workshop</h3>
+          <div class="event-meta">Dec 3, 2025 • Engineering Lab 2</div>
+          <p>Introductory workshop on autonomous robotics — limited seats available.</p>
+          <div class="center"><a class="btn" href="./events.html">Register Now</a></div>
+        </article>
+
+        <article class="card event-card">
+          <h3>Winter Cultural Night</h3>
+          <div class="event-meta">Dec 15, 2025 • Student Lawn</div>
+          <p>An evening of music, dance, and food stalls run by student clubs.</p>
+          <div class="center"><a class="btn" href="./gallery.html">See Gallery</a></div>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>&copy; 2025 Campus Events — University Name</div>
+      <div class="muted">Built by the CampusEvents Team</div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav toggle
+    const toggle = document.querySelector('.nav-toggle');
+    const navUL = document.querySelector('nav ul');
+    toggle && toggle.addEventListener('click', ()=>{
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!expanded));
+      if(navUL.style.display === 'flex'){navUL.style.display='none'} else {navUL.style.display='flex'}
+    });
+  </script>
+</body>
+</html>
