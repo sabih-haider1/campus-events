@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contact | Campus Events</title>
+  <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+  <header>
+    <div class="site-top">
+      <div class="brand"><span class="logo">CE</span><div>Campus Events</div></div>
+      <button class="nav-toggle" aria-expanded="false">☰</button>
+      <nav>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./events.html">Events</a></li>
+          <li><a href="./gallery.html">Gallery</a></li>
+          <li><a href="./sponsors.html">Sponsors</a></li>
+          <li><a class="active" href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section>
+      <h1>Contact Us</h1>
+      <p class="muted">Questions or suggestions? Drop us a message and the events team will respond.</p>
+      <div class="card" style="margin-top:1rem">
+        <form id="contactForm">
+          <div class="form-row"><label>Name <input type="text" name="name" required></label></div>
+          <div class="form-row"><label>Email <input type="email" name="email" required></label></div>
+          <div class="form-row"><label>Message <textarea name="message" required></textarea></label></div>
+          <div style="margin-top:.6rem"><button type="submit" class="btn">Send Message</button></div>
+        </form>
+        <div id="thanks" style="display:none;margin-top:1rem;padding:.6rem;background:#eaf7ff;border-radius:6px">Thanks for reaching out — we'll get back to you soon.</div>
+      </div>
+
+      <section style="margin-top:1.2rem">
+        <h2>Follow Us</h2>
+        <p class="muted">Stay updated — follow us on social media.</p>
+        <div style="display:flex;gap:.8rem;margin-top:.6rem">
+          <a class="btn" href="https://facebook.com" target="_blank">Facebook</a>
+          <a class="btn" style="background:#1DA1F2;" href="https://twitter.com" target="_blank">Twitter</a>
+          <a class="btn" style="background:#E1306C;" href="https://instagram.com" target="_blank">Instagram</a>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>&copy; 2025 Campus Events — University Name</div>
+      <div class="muted">Prefer email? events@university.edu</div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const navUL = document.querySelector('nav ul');
+    toggle && toggle.addEventListener('click', ()=>{navUL.style.display = navUL.style.display === 'flex' ? 'none' : 'flex'});
+
+    // Simple form handling
+    const form = document.getElementById('contactForm');
+    const thanks = document.getElementById('thanks');
+    form && form.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      // Simple client-side validation is handled by required attributes
+      form.reset();
+      thanks.style.display = 'block';
+    });
+  </script>
+</body>
+</html>
